@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-10-21T13:05:15 IST" name="Suite" finished-at="2024-10-21T13:05:34 IST" duration-ms="18265">
+    <groups>
+    </groups>
+    <test started-at="2024-10-21T13:05:15 IST" name="Test" finished-at="2024-10-21T13:05:34 IST" duration-ms="18265">
+      <class name="Testcase.MMBLogin">
+        <test-method is-config="true" signature="SelectManage()[pri:0, instance:Testcase.MMBLogin@4149c063]" started-at="2024-10-21T13:05:12 IST" name="SelectManage" finished-at="2024-10-21T13:05:15 IST" duration-ms="3428" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SelectManage -->
+        <test-method signature="ManageBooking()[pri:0, instance:Testcase.MMBLogin@4149c063]" started-at="2024-10-21T13:05:15 IST" name="ManageBooking" finished-at="2024-10-21T13:05:33 IST" duration-ms="18023" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ManageBooking -->
+      </class> <!-- Testcase.MMBLogin -->
+      <class name="Testcase.MMBFlowmethod">
+        <test-method signature="selectAEBookingmethod()[pri:0, instance:Testcase.MMBFlowmethod@17d919b6]" started-at="2024-10-21T13:05:33 IST" name="selectAEBookingmethod" finished-at="2024-10-21T13:05:34 IST" duration-ms="155" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectAEBookingmethod -->
+      </class> <!-- Testcase.MMBFlowmethod -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
