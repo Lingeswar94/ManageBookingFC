@@ -23,6 +23,7 @@ public class MMBChangeFlightAddon {
 	public static WebElement btnContinue;
 	
 	
+	
 	public void getcontine() {
 		btnContinue.click();
 	}
