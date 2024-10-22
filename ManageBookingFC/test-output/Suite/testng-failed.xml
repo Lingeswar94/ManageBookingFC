@@ -3,12 +3,12 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="Testcase.MMBFlowmethod">
+      <class name="Testcase.MMBChangeFlightAddonmethod">
         <methods>
-          <include name="selectAEBookingmethod"/>
+          <include name="ChangeAddonpage"/>
           <include name="SelectManage"/>
         </methods>
-      </class> <!-- Testcase.MMBFlowmethod -->
+      </class> <!-- Testcase.MMBChangeFlightAddonmethod -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

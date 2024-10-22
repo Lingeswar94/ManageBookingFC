@@ -12,8 +12,11 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeSuite;
 
+import TestPage.MMBChangeFlightAddon;
+import TestPage.MMBFlightresult;
 import TestPage.MMBFlow;
 import TestPage.ManageBookingPage;
+import Testcase.MMBFlightResultmethod;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CommonFuntion {
@@ -70,6 +73,8 @@ public class CommonFuntion {
 	public void initelement() {
 		PageFactory.initElements(CommonFuntion.getDriver(), ManageBookingPage.getManageBookingPage());
 		PageFactory.initElements(CommonFuntion.getDriver(), MMBFlow.getmmbFlow());
+		PageFactory.initElements(CommonFuntion.getDriver(), MMBFlightresult.getMmbFlightresult());
+		PageFactory.initElements(CommonFuntion.getDriver(), MMBChangeFlightAddon.getMmbChangeFlightAddon());
 	}
 
 	public static WebDriver getDriver() {

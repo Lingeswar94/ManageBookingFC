@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Testcase.MMBLogin">
+      <class name="Testcase.MMBFlowmethod">
         <methods>
-          <include name="ManageBooking"/>
           <include name="SelectManage"/>
+          <include name="selectAEBookingmethod"/>
         </methods>
-      </class> <!-- Testcase.MMBLogin -->
+      </class> <!-- Testcase.MMBFlowmethod -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

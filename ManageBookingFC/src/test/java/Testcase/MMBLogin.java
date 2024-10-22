@@ -13,8 +13,8 @@ public class MMBLogin extends CommonFuntion {
 	@Test
 	public void ManageBooking() {
 		
-		ManageBookingPage.bookingPNR.sendKeys("OIOPTR");
-		ManageBookingPage.FirstName.sendKeys("TamilPant");
+		ManageBookingPage.bookingPNR.sendKeys("TWDQFW");
+		ManageBookingPage.FirstName.sendKeys("TamilKhan");
 		ManageBookingPage.LastName.sendKeys("GQ");
 		ManageBookingPage.RetreiveDetails.click();
 	}

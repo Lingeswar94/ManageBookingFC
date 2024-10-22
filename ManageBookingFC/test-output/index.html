@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\Lingeshwar\eclipse-workspace\ManageBookingFC\testng.xml</span>
+                    <span>C:\Users\Lingeshwar\git\ManageBookingFC\ManageBookingFC\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,6 +101,16 @@
                       <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
                     <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Testcase.MMBChangeFlightAddonmethod" class="method navigator-link" hash-for-method="ChangeAddonpage">ChangeAddonpage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Testcase.MMBFlightResultmethod" class="method navigator-link" hash-for-method="Flightresult">Flightresult</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="Testcase.MMBLogin" class="method navigator-link" hash-for-method="ManageBooking">ManageBooking</a> <!-- method navigator-link -->
@@ -153,10 +163,40 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Testcase.MMBChangeFlightAddonmethod</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="ChangeAddonpage">
+                  </a> <!-- ChangeAddonpage -->
+                  <span class="method-name">ChangeAddonpage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Testcase.MMBFlightResultmethod</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Flightresult">
+                  </a> <!-- Flightresult -->
+                  <span class="method-name">Flightresult</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Lingeshwar\eclipse-workspace\ManageBookingFC\testng.xml</span>
+            <span class="header-content">C:\Users\Lingeshwar\git\ManageBookingFC\ManageBookingFC\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -167,6 +207,8 @@
     &lt;classes&gt;
       &lt;class name=&quot;Testcase.MMBLogin&quot;/&gt;
       &lt;class name=&quot;Testcase.MMBFlowmethod&quot;/&gt;
+      &lt;class name=&quot;Testcase.MMBFlightResultmethod&quot;/&gt;
+      &lt;class name=&quot;Testcase.MMBChangeFlightAddonmethod&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -180,7 +222,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (2 classes)</span>
+                <span class="test-name">Test (4 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -206,20 +248,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'ManageBooking')
-data.setCell(0, 2, 'Testcase.MMBLogin')
-data.setCell(0, 3, 18023);
+data.setCell(0, 1, 'ChangeAddonpage')
+data.setCell(0, 2, 'Testcase.MMBChangeFlightAddonmethod')
+data.setCell(0, 3, 41864);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'selectAEBookingmethod')
-data.setCell(1, 2, 'Testcase.MMBFlowmethod')
-data.setCell(1, 3, 155);
+data.setCell(1, 1, 'Flightresult')
+data.setCell(1, 2, 'Testcase.MMBFlightResultmethod')
+data.setCell(1, 3, 14629);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'ManageBooking')
+data.setCell(2, 2, 'Testcase.MMBLogin')
+data.setCell(2, 3, 11999);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'selectAEBookingmethod')
+data.setCell(3, 2, 'Testcase.MMBFlowmethod')
+data.setCell(3, 3, 1383);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 18 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -234,11 +284,25 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">Testcase.MMBFlowmethod</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">SelectManage</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">Testcase.MMBChangeFlightAddonmethod</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">SelectManage</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">Testcase.MMBFlightResultmethod</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">SelectManage</span>
                 <br/>
@@ -259,14 +323,28 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">ManageBooking</span>
-                <span class="method-start">3508 ms</span>
+                <span class="method-start">6184 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Testcase.MMBFlowmethod</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">selectAEBookingmethod</span>
-                <span class="method-start">21544 ms</span>
+                <span class="method-start">18188 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Testcase.MMBFlightResultmethod</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">Flightresult</span>
+                <span class="method-start">19574 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Testcase.MMBChangeFlightAddonmethod</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">ChangeAddonpage</span>
+                <span class="method-start">34205 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

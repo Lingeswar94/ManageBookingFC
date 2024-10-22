@@ -5,6 +5,8 @@
     <classes>
       <class name="Testcase.MMBLogin"/>
       <class name="Testcase.MMBFlowmethod"/>
+      <class name="Testcase.MMBFlightResultmethod"/>
+      <class name="Testcase.MMBChangeFlightAddonmethod"/> 
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
