@@ -15,6 +15,8 @@ import org.testng.annotations.BeforeSuite;
 import TestPage.MMBChangeFlightAddon;
 import TestPage.MMBFlightresult;
 import TestPage.MMBFlow;
+import TestPage.MMBItineraryPage;
+import TestPage.MMBPaymentPage;
 import TestPage.ManageBookingPage;
 import Testcase.MMBFlightResultmethod;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -75,6 +77,8 @@ public class CommonFuntion {
 		PageFactory.initElements(CommonFuntion.getDriver(), MMBFlow.getmmbFlow());
 		PageFactory.initElements(CommonFuntion.getDriver(), MMBFlightresult.getMmbFlightresult());
 		PageFactory.initElements(CommonFuntion.getDriver(), MMBChangeFlightAddon.getMmbChangeFlightAddon());
+		PageFactory.initElements(CommonFuntion.getDriver(), MMBItineraryPage.getItineraryPage());
+		PageFactory.initElements(CommonFuntion.getDriver(), MMBPaymentPage.getmmbPaymentPage());
 	}
 
 	public static WebDriver getDriver() {

@@ -13,14 +13,15 @@ public class MMBChangeFlightAddonmethod extends CommonFuntion {
 
 	@Test
 	public void ChangeAddonpage() {
-		WebDriverWait wait=new WebDriverWait(CommonFuntion.getDriver(), Duration.ofSeconds(20));
-		wait.until(ExpectedConditions.visibilityOf(MMBChangeFlightAddon.getMmbChangeFlightAddon().btnContinue));
 		
+		WebDriverWait wait = new WebDriverWait(CommonFuntion.getDriver(), Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.visibilityOf(MMBChangeFlightAddon.getMmbChangeFlightAddon().btnContinue));
+
 		try {
-		MMBChangeFlightAddon.getMmbChangeFlightAddon().getcontine();
-	}catch(Exception e) {
-		System.out.println(e.getMessage());
+			MMBChangeFlightAddon.getMmbChangeFlightAddon().getcontine();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
 		}
 	}
-	
+
 }

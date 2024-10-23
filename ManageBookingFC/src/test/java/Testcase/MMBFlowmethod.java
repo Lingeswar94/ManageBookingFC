@@ -9,6 +9,7 @@ public class MMBFlowmethod extends CommonFuntion {
 
 	@Test
 	public void selectAEBookingmethod() {
+		
 		try {
 			MMBFlow.getmmbFlow().BookingActions("Change Flight");
 
@@ -16,7 +17,7 @@ public class MMBFlowmethod extends CommonFuntion {
 			System.out.println(e.getMessage());
 		}
 		try {
-			MMBFlow.getmmbFlow().name(2, "December", "11", "2024", "December", "24", "2024");
+			MMBFlow.getmmbFlow().getsegmentselection(2, "December", "11", "2024", "December", "24", "2024");
 
 		} catch (Exception e) {
 			System.out.println(e.getMessage());

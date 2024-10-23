@@ -36,9 +36,9 @@ public class MMBFlow {
 	@FindBy(xpath = "//div[@id='bodycontent_RGFlightDetails_pnlSelectFlightCtrl_1']")
 	public static WebElement Changeflightinboundsegment;
 
-	@FindBy(xpath="//input[@id='bodycontent_btnContinue']")
+	@FindBy(xpath = "//input[@id='bodycontent_btnContinue']")
 	public static WebElement mmbchange_btnContinue;
-	
+
 	// Method to select flight segments based on index
 	public void Changeflightsegment(int index) {
 		String Segment = "//div[@id='bodycontent_RGFlightDetails_pnlSelectFlightCtrl_" + index + "']";
@@ -66,7 +66,7 @@ public class MMBFlow {
 	}
 
 	// Refactored method for flight change actions
-	public void name(int index, String Month, String date, String OuttargetYear, String reMonth, String redate,
+	public void getsegmentselection(int index, String Month, String date, String OuttargetYear, String reMonth, String redate,
 			String IntargetYear) {
 
 		if (index == 0) {
@@ -279,7 +279,7 @@ public class MMBFlow {
 	public void name22() {
 		ChangeflightOutboundsegment.click();
 	}
-	
+
 	public void btnContinue() {
 		mmbchange_btnContinue.click();
 	}

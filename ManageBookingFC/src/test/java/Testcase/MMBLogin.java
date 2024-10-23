@@ -7,12 +7,9 @@ import UtilityFunction.CommonFuntion;
 
 public class MMBLogin extends CommonFuntion {
 
-	
-	
-	
 	@Test
 	public void ManageBooking() {
-		
+
 		ManageBookingPage.bookingPNR.sendKeys("TWDQFW");
 		ManageBookingPage.FirstName.sendKeys("TamilKhan");
 		ManageBookingPage.LastName.sendKeys("GQ");

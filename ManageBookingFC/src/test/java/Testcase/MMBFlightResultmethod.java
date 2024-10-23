@@ -22,5 +22,6 @@ public class MMBFlightResultmethod extends CommonFuntion {
 		
 		MMBFlightresult.getMmbFlightresult().Fareselecting("pro", "pro");
 		MMBFlightresult.getMmbFlightresult().FlightContiune();
+		
 	}
 }

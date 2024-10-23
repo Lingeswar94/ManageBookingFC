@@ -7,6 +7,8 @@
       <class name="Testcase.MMBFlowmethod"/>
       <class name="Testcase.MMBFlightResultmethod"/>
       <class name="Testcase.MMBChangeFlightAddonmethod"/> 
+       <class name="Testcase.MMBItinerarymethod"/> 
+        <class name="Testcase.MMBPaymentmethod"/> 
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
