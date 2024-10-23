@@ -1,7 +1,8 @@
 package TestPage;
 
+
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
+
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
@@ -21,15 +22,15 @@ public class MMBPaymentPage {
 	}
 
 	@FindBy(xpath = "//label[@for='bodycontent_ucBookingPayment_rdolstPaymentMethods_0']")
-	private WebElement CCpayment;
+	public WebElement CCpayment;
 
-	@FindBy(xpath = "//input[@id='bodycontent_ucBookingPayment_ucCardDetails_txtFName']")
-	private WebElement Paymentcardname;
+	@FindBy(xpath = "//*[@id=\"bodycontent_ucBookingPayment_ucCardDetails_txtFName\"]")
+	public WebElement Paymentcardname;
 
 	@FindBy(xpath = "//select[@id='bodycontent_ucBookingPayment_ucCardDetails_ddlYear']")
 	private WebElement Expirydate;
 
-	@FindBy(xpath = "//input[@id='bodycontent_ucBookingPayment_ucCardDetails_txtCardNumber']")
+	@FindBy(xpath = "//*[@id=\"bodycontent_ucBookingPayment_ucCardDetails_txtCardNumber\"]")
 	private WebElement Cardno;
 
 	@FindBy(xpath = "//input[@id='bodycontent_ucBookingPayment_ucCardDetails_txtCVVCode']")
@@ -63,9 +64,11 @@ public class MMBPaymentPage {
 	}
 
 	public void carddetails(String CCcardname, String Cardnumber, String CCVno) {
+		
 		Paymentcardname.sendKeys(CCcardname);
 		Cardno.sendKeys(Cardnumber);
 		CVV.sendKeys(CCVno);
+		
 	}
 
 	public void Expirationyear(String expyear) {

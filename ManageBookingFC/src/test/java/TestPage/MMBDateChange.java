@@ -170,7 +170,7 @@ public class MMBDateChange {
 						// Wait and click the "Next" button using JavaScript Executor
 						WebElement nextButton = CommonFuntion.getDriver()
 								.findElement(By.xpath("//a[@class='ui-datepicker-next ui-corner-all']"));
-						// wait.until(ExpectedConditions.elementToBeClickable(nextButton));
+						wait.until(ExpectedConditions.elementToBeClickable(nextButton));
 						// nextButton.click();
 						((JavascriptExecutor) CommonFuntion.getDriver()).executeScript("arguments[0].click();",
 								nextButton);
@@ -187,8 +187,7 @@ public class MMBDateChange {
 										prevButton);
 								// prevButton.click();
 							} catch (Exception te) {
-								// throw new RuntimeException("Timeout while waiting for the Previous button to
-								// be clickable.");
+								 throw new RuntimeException("Timeout while waiting for the Previous button to be clickable.");
 							}
 
 						} else {
@@ -223,7 +222,7 @@ public class MMBDateChange {
 
 			// Wait until the calendar is visible
 			WebDriverWait wait = new WebDriverWait(CommonFuntion.getDriver(), Duration.ofSeconds(10));
-			// wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ui-datepicker-div")));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ui-datepicker-div")));
 
 			// Get the current month and year displayed in the date picker
 			String currentMonth = CommonFuntion.getDriver()
