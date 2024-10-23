@@ -9,6 +9,12 @@
           <include name="SelectManage"/>
         </methods>
       </class> <!-- Testcase.MMBChangeFlightAddonmethod -->
+      <class name="Testcase.MMBFlightResultmethod">
+        <methods>
+          <include name="Flightresult"/>
+          <include name="SelectManage"/>
+        </methods>
+      </class> <!-- Testcase.MMBFlightResultmethod -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
