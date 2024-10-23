@@ -1,5 +1,6 @@
 package TestPage;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -8,7 +9,7 @@ import UtilityFunction.CommonFuntion;
 public class MMBItineraryPage {
 
 	private static MMBItineraryPage mmbitineraryPage;
-
+	
 	private MMBItineraryPage() {
 		// TODO Auto-generated constructor stub
 	}

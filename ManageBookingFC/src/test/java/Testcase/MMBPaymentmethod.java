@@ -1,23 +1,46 @@
 package Testcase;
 
+import java.time.Duration;
+
+import org.apache.log4j.Logger;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import TestPage.MMBPaymentPage;
 import UtilityFunction.CommonFuntion;
+import UtilityFunction.ExcelData;
 
 public class MMBPaymentmethod extends CommonFuntion {
-
+	ExcelData excelData = new ExcelData();
+	Logger logger=Logger.getLogger(CommonFuntion.class);
 	@Test
 	public void getPayment() {
-
-		MMBPaymentPage.getmmbPaymentPage().SelectPayment();
-		MMBPaymentPage.getmmbPaymentPage().carddetails("Test", "4111111111111111", "123");
-		MMBPaymentPage.getmmbPaymentPage().Expirationyear("2026");
-		MMBPaymentPage.getmmbPaymentPage().Billingdataclear();
-		MMBPaymentPage.getmmbPaymentPage().Billingdetails("Tamil", "GQ", "25SaiBaba", "Coimbatore", "641001",
-				"9876543210");
-		MMBPaymentPage.getmmbPaymentPage().selectCountry("India");
-		MMBPaymentPage.getmmbPaymentPage().paymentcontinue();
-
+		WebDriverWait wait = new WebDriverWait(CommonFuntion.getDriver(), Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.visibilityOf(MMBPaymentPage.getmmbPaymentPage().CCpayment));
+		logger.info("Application moved to Payment Page ");
+		try {
+			
+			MMBPaymentPage.getmmbPaymentPage().SelectPayment();
+			wait.until(ExpectedConditions.visibilityOf(MMBPaymentPage.getmmbPaymentPage().Paymentcardname));
+			MMBPaymentPage.getmmbPaymentPage().carddetails(excelData.getPaymentMMBData("MMBPaymentDetails", 2, 1), excelData.getPaymentMMBData("MMBPaymentDetails", 3, 1), excelData.getPaymentMMBData("MMBPaymentDetails", 4, 1));
+			MMBPaymentPage.getmmbPaymentPage().Expirationyear(excelData.getPaymentMMBData("MMBPaymentDetails", 5, 1));
+			logger.info("User has completed  Payment details ");
+		} catch (Exception e) {
+			logger.error(e.getMessage());
+		}try {
+			
+			MMBPaymentPage.getmmbPaymentPage().Billingdataclear();
+			MMBPaymentPage.getmmbPaymentPage().Billingdetails(excelData.getBillingMMBData("MMBPaymentDetails", 10, 1), excelData.getBillingMMBData("MMBPaymentDetails", 11, 1), excelData.getBillingMMBData("MMBPaymentDetails", 12, 1), excelData.getBillingMMBData("MMBPaymentDetails", 13, 1), excelData.getBillingMMBData("MMBPaymentDetails", 14, 1),
+					excelData.getBillingMMBData("MMBPaymentDetails", 15, 1));
+			MMBPaymentPage.getmmbPaymentPage().selectCountry(excelData.getBillingMMBData("MMBPaymentDetails", 16, 1));
+			logger.info("User has completed Billing details ");
+			MMBPaymentPage.getmmbPaymentPage().paymentcontinue();
+			logger.info("Application moved to Payment is Processing");
+			String success=MMBPaymentPage.getmmbPaymentPage().Successmessage.getText();
+			logger.info(success);
+		} catch (Exception e) {
+			logger.error(e.getMessage());
+		}
 	}
 }
