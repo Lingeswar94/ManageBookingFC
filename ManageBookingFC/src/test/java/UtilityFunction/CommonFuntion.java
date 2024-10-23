@@ -19,7 +19,6 @@ import TestPage.MMBFlightresult;
 import TestPage.MMBItineraryPage;
 import TestPage.MMBPaymentPage;
 import TestPage.ManageBookingPage;
-import Testcase.MMBFlightResultmethod;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CommonFuntion {
