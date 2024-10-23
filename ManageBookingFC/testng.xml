@@ -4,7 +4,7 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="Testcase.MMBLogin"/>
-      <class name="Testcase.MMBFlowmethod"/>
+      <class name="Testcase.MMBChangeDateSelectionmethod"/>
       <class name="Testcase.MMBFlightResultmethod"/>
       <class name="Testcase.MMBChangeFlightAddonmethod"/> 
        <class name="Testcase.MMBItinerarymethod"/> 

@@ -13,19 +13,19 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import UtilityFunction.CommonFuntion;
 
-public class MMBFlow {
+public class MMBDateChange {
 
-	private static MMBFlow mmbFlow;
+	private static MMBDateChange mmbdatechange;
 
-	private MMBFlow() {
+	private MMBDateChange() {
 
 	}
 
-	public static MMBFlow getmmbFlow() {
-		if (mmbFlow == null) {
-			mmbFlow = new MMBFlow();
+	public static MMBDateChange getmmbdatechange() {
+		if (mmbdatechange == null) {
+			mmbdatechange = new MMBDateChange();
 		}
-		return mmbFlow;
+		return mmbdatechange;
 	}
 
 	@FindBy(xpath = "//div[@id='bodycontent_divAERBookingActions']/input")

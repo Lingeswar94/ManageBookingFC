@@ -13,8 +13,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeSuite;
 
 import TestPage.MMBChangeFlightAddon;
+import TestPage.MMBDateChange;
 import TestPage.MMBFlightresult;
-import TestPage.MMBFlow;
+
 import TestPage.MMBItineraryPage;
 import TestPage.MMBPaymentPage;
 import TestPage.ManageBookingPage;
@@ -74,7 +75,7 @@ public class CommonFuntion {
 	
 	public void initelement() {
 		PageFactory.initElements(CommonFuntion.getDriver(), ManageBookingPage.getManageBookingPage());
-		PageFactory.initElements(CommonFuntion.getDriver(), MMBFlow.getmmbFlow());
+		PageFactory.initElements(CommonFuntion.getDriver(), MMBDateChange.getmmbdatechange());
 		PageFactory.initElements(CommonFuntion.getDriver(), MMBFlightresult.getMmbFlightresult());
 		PageFactory.initElements(CommonFuntion.getDriver(), MMBChangeFlightAddon.getMmbChangeFlightAddon());
 		PageFactory.initElements(CommonFuntion.getDriver(), MMBItineraryPage.getItineraryPage());
