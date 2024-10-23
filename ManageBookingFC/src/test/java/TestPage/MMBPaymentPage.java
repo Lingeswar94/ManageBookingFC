@@ -58,6 +58,9 @@ public class MMBPaymentPage {
 
 	@FindBy(xpath = "//input[@id='bodycontent_ucBookingPayment_btnMakePayment']")
 	private WebElement MakePayment;
+	
+	@FindBy(xpath="//span[@id='bodycontent_lblErrorMsgs']")
+	public WebElement Successmessage;
 
 	public void SelectPayment() {
 		CCpayment.click();
@@ -99,6 +102,10 @@ public class MMBPaymentPage {
 
 	public void paymentcontinue() {
 		MakePayment.click();
+	}
+	
+	public void getsuccessmessage(String success) {
+	 success =Successmessage.getText();
 	}
 
 }

@@ -2,46 +2,50 @@
 <testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-23T12:55:06 IST" name="Suite" finished-at="2024-10-23T12:58:42 IST" duration-ms="215963">
+  <suite started-at="2024-10-23T18:01:57 IST" name="Suite" finished-at="2024-10-23T18:05:13 IST" duration-ms="195527">
     <groups>
     </groups>
-    <test started-at="2024-10-23T12:55:06 IST" name="Test" finished-at="2024-10-23T12:58:42 IST" duration-ms="215963">
+    <test started-at="2024-10-23T18:01:57 IST" name="Test" finished-at="2024-10-23T18:05:13 IST" duration-ms="195527">
       <class name="Testcase.MMBLogin">
-        <test-method is-config="true" signature="SelectManage()[pri:0, instance:Testcase.MMBLogin@34129c78]" started-at="2024-10-23T12:55:01 IST" name="SelectManage" finished-at="2024-10-23T12:55:06 IST" duration-ms="4815" status="PASS">
+        <test-method is-config="true" signature="SelectManage()[pri:0, instance:Testcase.MMBLogin@4e7095ac]" started-at="2024-10-23T18:01:54 IST" name="SelectManage" finished-at="2024-10-23T18:01:57 IST" duration-ms="3433" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SelectManage -->
-        <test-method signature="ManageBooking()[pri:0, instance:Testcase.MMBLogin@34129c78]" started-at="2024-10-23T12:55:06 IST" name="ManageBooking" finished-at="2024-10-23T12:55:18 IST" duration-ms="12691" status="PASS">
+        <test-method signature="ManageBooking()[pri:0, instance:Testcase.MMBLogin@4e7095ac]" started-at="2024-10-23T18:01:57 IST" name="ManageBooking" finished-at="2024-10-23T18:02:06 IST" duration-ms="8676" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ManageBooking -->
+        <test-method is-config="true" signature="tearDownReport()[pri:0, instance:Testcase.MMBLogin@4e7095ac]" started-at="2024-10-23T18:05:13 IST" name="tearDownReport" finished-at="2024-10-23T18:05:14 IST" duration-ms="688" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownReport -->
       </class> <!-- Testcase.MMBLogin -->
       <class name="Testcase.MMBPaymentmethod">
-        <test-method signature="getPayment()[pri:0, instance:Testcase.MMBPaymentmethod@3f1d2e23]" started-at="2024-10-23T12:56:21 IST" name="getPayment" finished-at="2024-10-23T12:58:42 IST" duration-ms="140407" status="PASS">
+        <test-method signature="getPayment()[pri:0, instance:Testcase.MMBPaymentmethod@676f0a60]" started-at="2024-10-23T18:02:58 IST" name="getPayment" finished-at="2024-10-23T18:05:13 IST" duration-ms="135144" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getPayment -->
       </class> <!-- Testcase.MMBPaymentmethod -->
       <class name="Testcase.MMBChangeDateSelectionmethod">
-        <test-method signature="selectAEBookingmethod()[pri:0, instance:Testcase.MMBChangeDateSelectionmethod@4ef74c30]" started-at="2024-10-23T12:55:18 IST" name="selectAEBookingmethod" finished-at="2024-10-23T12:55:23 IST" duration-ms="4930" status="PASS">
+        <test-method signature="selectAEBookingmethod()[pri:0, instance:Testcase.MMBChangeDateSelectionmethod@30f4b1a6]" started-at="2024-10-23T18:02:06 IST" name="selectAEBookingmethod" finished-at="2024-10-23T18:02:07 IST" duration-ms="1345" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectAEBookingmethod -->
       </class> <!-- Testcase.MMBChangeDateSelectionmethod -->
       <class name="Testcase.MMBFlightResultmethod">
-        <test-method signature="Flightresult()[pri:0, instance:Testcase.MMBFlightResultmethod@7283d3eb]" started-at="2024-10-23T12:55:23 IST" name="Flightresult" finished-at="2024-10-23T12:55:36 IST" duration-ms="13092" status="PASS">
+        <test-method signature="Flightresult()[pri:0, instance:Testcase.MMBFlightResultmethod@60222fd8]" started-at="2024-10-23T18:02:07 IST" name="Flightresult" finished-at="2024-10-23T18:02:18 IST" duration-ms="10832" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Flightresult -->
       </class> <!-- Testcase.MMBFlightResultmethod -->
       <class name="Testcase.MMBItinerarymethod">
-        <test-method signature="VerifyItinerary()[pri:0, instance:Testcase.MMBItinerarymethod@4bff7da0]" started-at="2024-10-23T12:56:21 IST" name="VerifyItinerary" finished-at="2024-10-23T12:56:21 IST" duration-ms="279" status="PASS">
+        <test-method signature="VerifyItinerary()[pri:0, instance:Testcase.MMBItinerarymethod@26f1249d]" started-at="2024-10-23T18:02:58 IST" name="VerifyItinerary" finished-at="2024-10-23T18:02:58 IST" duration-ms="139" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyItinerary -->
       </class> <!-- Testcase.MMBItinerarymethod -->
       <class name="Testcase.MMBChangeFlightAddonmethod">
-        <test-method signature="ChangeAddonpage()[pri:0, instance:Testcase.MMBChangeFlightAddonmethod@638ef7ed]" started-at="2024-10-23T12:55:36 IST" name="ChangeAddonpage" finished-at="2024-10-23T12:56:21 IST" duration-ms="44432" status="PASS">
+        <test-method signature="ChangeAddonpage()[pri:0, instance:Testcase.MMBChangeFlightAddonmethod@53bf7094]" started-at="2024-10-23T18:02:18 IST" name="ChangeAddonpage" finished-at="2024-10-23T18:02:58 IST" duration-ms="39308" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ChangeAddonpage -->

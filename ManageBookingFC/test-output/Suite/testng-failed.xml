@@ -3,20 +3,23 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="Testcase.MMBItinerarymethod">
-        <methods>
-          <include name="VerifyItinerary"/>
-          <include name="SelectManage"/>
-        </methods>
-      </class> <!-- Testcase.MMBItinerarymethod -->
       <class name="Testcase.MMBChangeFlightAddonmethod">
         <methods>
+          <include name="tearDownReport"/>
           <include name="ChangeAddonpage"/>
           <include name="SelectManage"/>
         </methods>
       </class> <!-- Testcase.MMBChangeFlightAddonmethod -->
+      <class name="Testcase.MMBFlightResultmethod">
+        <methods>
+          <include name="tearDownReport"/>
+          <include name="Flightresult"/>
+          <include name="SelectManage"/>
+        </methods>
+      </class> <!-- Testcase.MMBFlightResultmethod -->
       <class name="Testcase.MMBPaymentmethod">
         <methods>
+          <include name="tearDownReport"/>
           <include name="getPayment"/>
           <include name="SelectManage"/>
         </methods>

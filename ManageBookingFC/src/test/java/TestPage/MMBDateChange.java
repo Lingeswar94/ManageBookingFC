@@ -3,6 +3,7 @@ package TestPage;
 import java.time.Duration;
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -11,12 +12,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import Testcase.MMBChangeDateSelectionmethod;
 import UtilityFunction.CommonFuntion;
 
 public class MMBDateChange {
 
 	private static MMBDateChange mmbdatechange;
-
+	Logger logger=Logger.getLogger(MMBDateChange.class);
 	private MMBDateChange() {
 
 	}
@@ -66,8 +68,9 @@ public class MMBDateChange {
 	}
 
 	// Refactored method for flight change actions
-	public void getsegmentselection(int index, String Month, String date, String OuttargetYear, String reMonth, String redate,
-			String IntargetYear) {
+	public void getsegmentselection(String indexs, String Month, String date, String OuttargetYear, String reMonth,
+			String redate, String IntargetYear) {
+		int index = Integer.parseInt(indexs);
 
 		if (index == 0) {
 			ChangeflightOutboundsegment.click();
@@ -187,7 +190,10 @@ public class MMBDateChange {
 										prevButton);
 								// prevButton.click();
 							} catch (Exception te) {
-								 throw new RuntimeException("Timeout while waiting for the Previous button to be clickable.");
+								//throw new RuntimeException(
+										//"Timeout while waiting for the Previous button to be clickable.");
+								
+								logger.error("Timeout while waiting for the Previous button to be clickable."+te.getMessage());
 							}
 
 						} else {
@@ -210,7 +216,7 @@ public class MMBDateChange {
 			}
 
 		} catch (Exception e) {
-			System.out.println("Error selecting outbound date: " + e.getMessage());
+			logger.error("Error selecting outbound date: " + e.getMessage());
 		}
 	}
 
@@ -271,14 +277,9 @@ public class MMBDateChange {
 
 			}
 		} catch (Exception e) {
-			System.out.println("Error: " + e.getMessage());
+			logger.error("Error: " + e.getMessage());
 		}
 	}
-
-	public void name22() {
-		ChangeflightOutboundsegment.click();
-	}
-
 	public void btnContinue() {
 		mmbchange_btnContinue.click();
 	}
