@@ -1,4 +1,4 @@
-package Testcase;
+package mmbChangeFlightTestcase;
 
 import java.time.Duration;
 
@@ -7,9 +7,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-import TestPage.MMBFlightresult;
 import UtilityFunction.CommonFuntion;
 import UtilityFunction.ExcelData;
+import mmbChangeFlightTestPage.MMBFlightresult;
 
 public class MMBFlightResultmethod extends CommonFuntion {
 

@@ -1,4 +1,4 @@
-package TestPage;
+package mmbCommon;
 
 
 import org.openqa.selenium.WebElement;

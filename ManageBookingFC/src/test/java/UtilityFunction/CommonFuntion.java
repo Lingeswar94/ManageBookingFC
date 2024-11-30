@@ -3,6 +3,8 @@ package UtilityFunction;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -13,17 +15,19 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.TestNG;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
-import TestPage.MMBChangeFlightAddon;
-import TestPage.MMBDateChange;
-import TestPage.MMBFlightresult;
-
-import TestPage.MMBItineraryPage;
-import TestPage.MMBPaymentPage;
-import TestPage.ManageBookingPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import mmbAddonPage.MMBAddonPricecheck;
+import mmbAddonPage.MMBAddonSelection;
+import mmbChangeFlightTestPage.MMBChangeFlightAddon;
+import mmbChangeFlightTestPage.MMBDateChange;
+import mmbChangeFlightTestPage.MMBFlightresult;
+import mmbChangeFlightTestPage.MMBItineraryPage;
+import mmbCommon.MMBPaymentPage;
+import mmbCommon.ManageBookingPage;
 
 public class CommonFuntion {
 
@@ -57,6 +61,7 @@ public class CommonFuntion {
 		PropertyConfigurator.configure("./src/test/resources/Config/Log4j.properties");
 		logger.info("Application Start for MMB ManageBooking Flow :");
 		loadbrowser();
+		ManageBooking(properties.getProperty("TestNGfilename"));
 		logger.info("Application moved to Selecting Browser for execute ");
 		if (CommonFuntion.getDriver() == null) {
 			if (Constant.Browser.equalsIgnoreCase("Chrome")) {
@@ -83,6 +88,7 @@ public class CommonFuntion {
 		CommonFuntion.getDriver().manage().window().maximize();
 		CommonFuntion.getDriver().manage().deleteAllCookies();
 		CommonFuntion.getDriver().manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	//	ManageBooking(properties.getProperty("TestNGfilename"));
 	}
 
 	public void initelement() {
@@ -92,6 +98,34 @@ public class CommonFuntion {
 		PageFactory.initElements(CommonFuntion.getDriver(), MMBChangeFlightAddon.getMmbChangeFlightAddon());
 		PageFactory.initElements(CommonFuntion.getDriver(), MMBItineraryPage.getItineraryPage());
 		PageFactory.initElements(CommonFuntion.getDriver(), MMBPaymentPage.getmmbPaymentPage());
+		PageFactory.initElements(CommonFuntion.getDriver(), MMBAddonSelection.getMmbAddonSelection());
+		PageFactory.initElements(CommonFuntion.getDriver(), MMBAddonPricecheck.getMmbAddonPricecheck());
+	}
+	
+	
+		public void ManageBooking(String TestNGfilename) {
+
+		    TestNG testNG = new TestNG();
+		    List<String> list = new ArrayList<>();
+
+		    // Add XML files to the list
+		    list.add("./src/test/resources/TestNGxmlFile/MMBChangeFlight.xml");
+		    list.add("./src/test/resources/TestNGxmlFile/MMBAddon.xml");
+		    list.add("./src/test/resources/TestNGxmlFile/Email.xml");
+		    //list.add("./src/test/resources/TestNGxmlFile/MMBAddon.xml");
+
+		    // Loop through XML files to match the given TestNGfilename
+		    for (String xmlFile : list) {
+		        if (xmlFile.contains(TestNGfilename)) {
+		            // Run only the TestNG suite that matches TestNGfilename
+		            List<String> specificSuite = new ArrayList<>();
+		            specificSuite.add(xmlFile);
+		            testNG.setTestSuites(specificSuite);
+		            testNG.run();
+		            break; // Exit loop after running the specified file
+		        }
+		    }
+		
 	}
 
 	public static WebDriver getDriver() {

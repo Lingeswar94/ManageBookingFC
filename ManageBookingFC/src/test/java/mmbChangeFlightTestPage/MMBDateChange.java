@@ -1,4 +1,4 @@
-package TestPage;
+package mmbChangeFlightTestPage;
 
 import java.time.Duration;
 import java.util.List;
@@ -12,8 +12,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import Testcase.MMBChangeDateSelectionmethod;
 import UtilityFunction.CommonFuntion;
+import mmbChangeFlightTestcase.MMBChangeDateSelectionmethod;
 
 public class MMBDateChange {
 
@@ -30,8 +30,7 @@ public class MMBDateChange {
 		return mmbdatechange;
 	}
 
-	@FindBy(xpath = "//div[@id='bodycontent_divAERBookingActions']/input")
-	public static List<WebElement> bookingactionitems;
+	
 
 	@FindBy(xpath = "//div[@id='bodycontent_RGFlightDetails_pnlSelectFlightCtrl_0']")
 	public static WebElement ChangeflightOutboundsegment;
@@ -48,24 +47,7 @@ public class MMBDateChange {
 	}
 
 	// Main method to handle booking actions and select a segment
-	public void BookingActions(String Flowname) {
-		try {
-			// Avoid index out-of-bound by using < instead of <=
-			int size = bookingactionitems.size();
-			for (int i = 0; i < size; i++) {
-				String AEBookingname = bookingactionitems.get(i).getAttribute("value");
-				if (Flowname.equalsIgnoreCase(AEBookingname)) {
-					bookingactionitems.get(i).click();
-					// After clicking, exit the loop
-					return;
-				}
-			}
-			// Call the method to handle the flow after clicking
-			// name( index, Month, date);
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-		}
-	}
+	
 
 	// Refactored method for flight change actions
 	public void getsegmentselection(String indexs, String Month, String date, String OuttargetYear, String reMonth,

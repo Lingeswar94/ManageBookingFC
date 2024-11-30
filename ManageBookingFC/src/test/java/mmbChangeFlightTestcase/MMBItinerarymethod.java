@@ -1,11 +1,11 @@
-package Testcase;
+package mmbChangeFlightTestcase;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.Alert;
 import org.testng.annotations.Test;
 
-import TestPage.MMBItineraryPage;
 import UtilityFunction.CommonFuntion;
+import mmbChangeFlightTestPage.MMBItineraryPage;
 
 public class MMBItinerarymethod extends CommonFuntion {
 	Logger logger = Logger.getLogger(MMBItinerarymethod.class);

@@ -1,4 +1,4 @@
-package TestPage;
+package mmbChangeFlightTestPage;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import Testcase.MMBFlightResultmethod;
+import mmbChangeFlightTestcase.MMBFlightResultmethod;
 
 public class MMBFlightresult {
 

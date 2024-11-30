@@ -3,27 +3,34 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="Testcase.MMBChangeFlightAddonmethod">
+      <class name="mmbCommon.MMBLogin">
         <methods>
           <include name="tearDownReport"/>
-          <include name="ChangeAddonpage"/>
+          <include name="ManageFunction"/>
           <include name="SelectManage"/>
         </methods>
-      </class> <!-- Testcase.MMBChangeFlightAddonmethod -->
-      <class name="Testcase.MMBFlightResultmethod">
+      </class> <!-- mmbCommon.MMBLogin -->
+      <class name="mmbAddonTestcase.MMBBagageSelectionmethod">
         <methods>
           <include name="tearDownReport"/>
-          <include name="Flightresult"/>
+          <include name="getBaggageselection"/>
           <include name="SelectManage"/>
         </methods>
-      </class> <!-- Testcase.MMBFlightResultmethod -->
-      <class name="Testcase.MMBPaymentmethod">
+      </class> <!-- mmbAddonTestcase.MMBBagageSelectionmethod -->
+      <class name="mmbCommon.MMBPaymentmethod">
         <methods>
           <include name="tearDownReport"/>
           <include name="getPayment"/>
           <include name="SelectManage"/>
         </methods>
-      </class> <!-- Testcase.MMBPaymentmethod -->
+      </class> <!-- mmbCommon.MMBPaymentmethod -->
+      <class name="mmbAddonTestcase.MMBAddonPricecheckmethod">
+        <methods>
+          <include name="tearDownReport"/>
+          <include name="getPricecheck"/>
+          <include name="SelectManage"/>
+        </methods>
+      </class> <!-- mmbAddonTestcase.MMBAddonPricecheckmethod -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
